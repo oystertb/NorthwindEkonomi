@@ -1,0 +1,33 @@
+﻿@*@model List<string>*@
+@model NorthwindEkonomi.MvcUI.Models.HomeDemoViewModel
+
+@{
+    Layout = null;
+}
+
+<!--Razor syntax-->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Demo</title>
+</head>
+<body>
+
+     @*@Model Bunun tipini yukarıda belirledik*@
+    <ul>
+        @foreach (var isim in Model.Isimler)
+        {
+            <li>@isim</li>
+        }
+    </ul>
+
+    <ol>
+         @foreach (var sayi in Model.Sayilar)
+         {
+             <li>@sayi</li>
+         }
+    </ol>
+</body>
+</html>

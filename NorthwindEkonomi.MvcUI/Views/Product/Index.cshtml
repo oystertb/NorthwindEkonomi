@@ -1,0 +1,22 @@
+﻿@model NorthwindEkonomi.MvcUI.Models.ProductIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="page-header">Ürünler</h3>
+
+<ul class="list-group">
+    @foreach (var product in Model.Products)
+    {
+    <li class="list-group-item">
+        <h4>@product.Name</h4>
+        <p>@product.Description</p>
+        <b>@product.UnitPrice.ToString("c")</b> <!--ToString("c")=curreny format-->
+    </li>
+    }
+
+
+</ul>
+

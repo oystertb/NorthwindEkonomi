@@ -1,0 +1,17 @@
+﻿@model NorthwindEkonomi.MvcUI.Models.CategoryListViewModel
+
+<h3 class="page-header">Kategoriler</h3>
+
+<div class="list-group">
+    @foreach (var category in Model.Categories)
+    {
+        @*<a href="/Product/Index?categoryId=@category.Id" class="list-group-item">
+                @category.Name
+            </a>*@ <!--URL i elle oluşturmak tavsiye edilmez. Onun yerine aşağıdaki kullanılabilir. -->
+
+        <a href="@Url.Action("Index","Product", new { categoryId = category.Id })" class="list-group-item">
+            @category.Name
+        </a>
+    }
+
+</div>
